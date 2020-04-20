@@ -39,6 +39,7 @@ header{
   color: #222222;
   text-decoration: none;
 
+
 }
 
 .header_2{
@@ -136,6 +137,7 @@ header{
   border-bottom: 1px solid gray;
   width: 90%;
   margin: 0 auto 10px auto;
+  /* color: red; */
 }
 
 .text{
