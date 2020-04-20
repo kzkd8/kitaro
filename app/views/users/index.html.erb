@@ -1,0 +1,16 @@
+<div class="users_index">
+  <div class="container">
+    <% @users.each do |user| %>
+      <div class="user-container-user">
+        <div class="user-container-user_1">
+          <%= user.id %>
+        </div>
+        <div class="menu-container_user_2">
+          <%= link_to(user.name, "/users/#{user.id}") %>
+          <%= user.email %>
+          <%= user.password %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+class CreateMenus < ActiveRecord::Migration[5.2]
+  def change
+    create_table :menus do |t|
+      t.string :product
+      t.integer :price
+      t.string :product_image
+
+      t.timestamps
+    end
+  end
+end

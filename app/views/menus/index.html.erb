@@ -1,0 +1,23 @@
+<div class="menus_index">
+  <p class="title">お品書き</p>
+  <div class="menu_index_container">
+    <% @menus.each do |menu| %>
+      <div class="menu_index_container_item">
+        <div class="menu_index_container_item_1">
+          <img src="<%= "/product_images/#{menu.product_image}" %>" alt="">
+        </div>
+        <div class="menu_index_container_item_2">
+          <div class="menu_index_container_item_2_1">
+            <%= link_to(menu.product, "/menus/#{menu.id}", class: "menulink") %>
+          </div>
+          <div class="menu_index_container_item_2_2">
+            <%= menu.price %>円
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <div class="totop">
+    <a href="#"><i class="fa fa-angle-double-up fa-2x"></i></a>
+  </div>
+</div>

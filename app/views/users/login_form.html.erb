@@ -1,0 +1,15 @@
+<div class="users_login_form">
+  <div class="container">
+    <%= form_tag("/login") do %>
+    <p class="login_form">メールアドレス</p>
+    <div class="login_form_2">
+      <input type="text" name="email" value="<%= @email %>">
+    </div>
+    <p class="login_form">パスワード</p>
+    <div class="login_form_2">
+      <input type="password" name="password" value="<%= @password %>">
+    </div>
+    <p class="login_form"><input type="submit" name="" value="ログイン"></p>
+    <% end %>
+  </div>
+</div>

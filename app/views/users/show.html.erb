@@ -1,0 +1,24 @@
+<div class="users_show">
+  <div class="container">
+    <p class="user_show_1">ＩＤ</p>
+    <div class="user_show_2">
+      <%= @user.id %>
+    </div>
+    <p class="user_show_1">ユーザー名</p>
+    <div class="user_show_2">
+      <%= @user.name %>
+    </div>
+    <p class="user_show_1">メールアドレス</p>
+    <div class="user_show_2">
+      <%= @user.email %>
+    </div>
+    <p class="user_show_1">パスワード</p>
+    <div class="user_show_2">
+      <%= @user.password %>
+    </div>
+    <div class="user_show_1">
+      <p><%= link_to("編集", "/users/#{@user.id}/edit") %></p>
+      <p><%= link_to("削除", "/users/#{@user.id}/destroy", {method: "post"}) %></p>
+    </div>
+  </div>
+</div>

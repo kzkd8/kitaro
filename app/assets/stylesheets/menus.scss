@@ -1,0 +1,124 @@
+// Place all the styles related to the menus controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.menu_index_container{
+  // border: 1px solid black;
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.menu_index_container_item{
+  // border: 1px solid red;
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #EEEEEE;
+  margin-bottom: 10px;
+}
+
+.menu_index_container_item_1{
+  // border: 1px solid red;
+  // background-color: #FFCCCC;
+  height: auto;
+  width: auto;
+  // padding-left: 10px;
+}
+
+.menu_index_container_item_1 img{
+  height: 60px;
+  width: auto;
+}
+
+.menu_index_container_item_2{
+  // border: 1px solid blue;
+  padding-left: 20px;
+  // width: 100%;
+}
+
+.menu_index_container_item_2_1{
+  // background-color: #00FF66;
+  font-size: 12px;
+  height: 50%;
+}
+
+
+
+
+.menus_show{
+  width: 90%;
+  margin: 0 auto;
+}
+
+.menu_show_1{
+}
+
+.menu_show_2{
+}
+
+.menu_show_3{
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  // border: 1px solid blue;
+}
+
+.menu_show_3_1{
+  // border: 1px solid red;
+  margin-right: 10px;
+}
+
+.menu_show_3_2{
+  // border: 1px solid red;
+  margin-left: 10px;
+}
+
+
+
+.menulink{
+  text-decoration: none;
+}
+
+.menu-container_item_2_2{
+  // background-color: #00CCFF;
+  font-size: 15px;
+  height: 50%;
+}
+
+.new{
+  width: 90%;
+  margin: 0 auto;
+  // border-bottom: 1px solid gray;
+}
+
+.new_2{
+  // background-color: red;
+  margin: 0 auto 30px auto;
+  width: 90%;
+}
+
+.show{
+  width: 90%;
+  margin: 0 auto;
+  border-bottom: 1px solid gray;
+}
+
+.show_2{
+  // background-color: red;
+  margin: 0 auto 30px auto;
+  width: 90%;
+}
+
+.edit{
+  width: 90%;
+  margin: 0 auto;
+  // border-bottom: 1px solid #EEEEEE;
+}
+
+.edit_2{
+  // background-color: red;
+  margin: 0 auto 30px auto;
+  width: 90%;
+}

@@ -1,0 +1,25 @@
+<div class="users_edit">
+  <div class="container">
+    <%= form_tag("/users/#{@user.id}/update") do %>
+    <p class="user_edit">ＩＤ</p>
+    <div class="user_edit_2">
+      <%= @user.id %>
+    </div>
+    <p class="user_edit">ユーザー名</p>
+    <div class="user_edit_2">
+      <input type="text" name="name" value="<%= @user.name %>">
+    </div>
+    <p class="user_edit">メールアドレス</p>
+    <div class="user_edit_2">
+      <input type="text" name="email" value="<%= @user.email %>">
+    </div>
+    <p class="user_edit">パスワード</p>
+    <div class="user_edit_2">
+      <input type="password" name="password" value="<%= @user.password %>">
+    </div>
+    <div class="user_edit">
+      <p><input type="submit" name="" value="編集"></p>
+    </div>
+    <% end %>
+  </div>
+</div>

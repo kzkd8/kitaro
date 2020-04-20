@@ -1,0 +1,24 @@
+<div class="menu_new">
+  <%= form_tag("/menus/create") do %>
+    <p class="new">商品名</p>
+    <div class="new_2">
+      <input type="text" name="product" value="">
+    </div>
+    <p class="new">価格</p>
+    <div class="new_2">
+      <input type="number" name="price" value="">
+    </div>
+    <p class="new">カテゴリー</p>
+    <div class="new_2">
+      <select class="" name="category" value="<%= @menu.category %>">
+        <option value="0_選択する">0_選択する</option>
+        <option value="1_1_food_焼き鳥">1_1_food_焼き鳥</option>
+        <option value="1_2_food_焼き鳥以外">1_2_food_焼き鳥以外</option>
+        <option value="2_1_drink_アルコール">2_1_drink_アルコール</option>
+        <option value="2_2_drink_アルコール以外">2_2_drink_アルコール以外</option>
+      </select>
+    </div>
+    <p class="new"><input type="submit" name="" value="登録"></p>
+
+  <% end %>
+</div>

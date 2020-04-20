@@ -1,0 +1,40 @@
+<div class="menus_show">
+  <div class="menu_show_1">
+    <p class="menu_show_1_1">画像</p>
+    <div class="menu_show_1_2">
+      <%= @menu.product_image %>
+    </div>
+    <p class="menu_show_1_1">商品名</p>
+    <div class="menu_show_1_2">
+      <%= @menu.product %>
+    </div>
+    <p class="menu_show_1_1">価格</p>
+    <div class="menu_show_1_2">
+      <%= @menu.price %>
+    </div>
+  </div>
+
+  <div class="menu_show_2">
+    <% if @current_user %>
+      <p class="menu_show_2_1">カテゴリー</p>
+      <div class="menu_show_2_2">
+        <%= @menu.category %>
+      </div>
+      <p class="menu_show_2_1">編集日時</p>
+      <div class="menu_show_2_2">
+        <%= @menu.updated_at %>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="menu_show_3">
+    <% if @current_user %>
+      <div class="menu_show_3_1">
+        <%= link_to("編集", "/menus/#{@menu.id}/edit") %>
+      </div>
+      <div class="menu_show_3_2">
+        <%= link_to("削除", "/menus/#{@menu.id}/destroy", {method: "post"}) %>
+      </div>
+    <% end %>
+  </div>
+</div>

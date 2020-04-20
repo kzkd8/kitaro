@@ -1,0 +1,34 @@
+<div class="Menus#edit">
+  <%= form_tag("/menus/#{@menu.id}/update", {multipart: true}) do %>
+    <p class="edit">商品名</p>
+    <div class="edit_2">
+      <input type="text" name="product" value="<%= @menu.product %>">
+    </div>
+    <p class="edit">価格</p>
+    <div class="edit_2">
+      <input type="number" name="price" value="<%= @menu.price %>">
+    </div>
+    <p class="edit">画像</p>
+    <div class="edit_2">
+      <input type="file" name="product_image" value="<%= @menu.product_image %>">
+    </div>
+    <p class="edit">カテゴリー</p>
+    <div class="edit_2">
+      <select class="" name="category" value="<%= @menu.category %>">
+        <option value="0_選択する">0_選択する</option>
+        <option value="1_1_food_焼き鳥">1_1_food_焼き鳥</option>
+        <option value="1_2_food_焼き鳥以外">1_2_food_焼き鳥以外</option>
+        <option value="2_1_drink_アルコール">2_1_drink_アルコール</option>
+        <option value="2_2_drink_アルコール以外">2_2_drink_アルコール以外</option>
+        <option value="3_その他">3_2_drink_アルコール以外</option>
+      </select>
+    </div>
+    <div class="edit_2">
+      <p><input type="submit" name="" value="編集"></p>
+    </div>
+
+  <% end %>
+</div>
+
+
+<!-- 画像を送信する時のform_tagの引数に追加=>{multipart: true} -->

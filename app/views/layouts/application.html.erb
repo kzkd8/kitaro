@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DeliApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <!-- レスポンシブデザインを適用する準備→viewportを読み込むための<meta>タグを記述 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- responsive.cssを読み込む際には、必ずviewportよりも下の行に記述する -->
+    <link rel="stylesheet" href="responsive.css">
+  </head>
+
+  <body>
+    <header>
+      <div class="header_1">
+        <% if @current_user %>
+          <a class="header_1_login_user_name">
+            <%= link_to(@current_user.name, "/users/#{@current_user.id}") %>
+          </a>
+          <a class="header_1_login_user">がログイン中</a>
+        <% end %>
+
+      </div>
+
+      <div class="header_2">
+        <div class="header_2_1">
+          <a href="/"><img src="https://yahoo.jp/box/Vc9NNR" alt=""></a>
+        </div>
+        <div class="header_2_2">
+          <i class="fa fa-bars fa-2x"></i>
+        </div>
+      </div>
+
+
+      <div class="header_3">
+        <img src="https://yahoo.jp/box/vp9-BV" alt="鬼太郎天神店">
+      </div>
+
+      <div class="header_4">
+        <ul class="">
+          <li class="header_4_list">
+            <div class="header_4_list_1">
+              <a href="/about">鬼多郎とは</a>
+            </div>
+            <div class="header_4_list_2">
+              <i class="fa fa-angle-right"></i>
+            </div>
+          </li>
+          <li class="header_4_list">
+            <div class="header_4_list_1">
+              <a href="/flow">ご注文からお届けまで</a>
+            </div>
+            <div class="header_4_list_2">
+              <i class="fa fa-angle-right"></i>
+            </div>
+          </li>
+          <li class="header_4_list">
+            <div class="header_4_list_1">
+              <a href="/menus/index">お品書き</a>
+            </div>
+            <div class="header_4_list_2">
+              <i class="fa fa-angle-right"></i>
+            </div>
+          </li>
+          <li class="header_4_list">
+            <div class="header_4_list_1">
+              <a href="https://ws.formzu.net/sfgen/S89683068/" target="blank">ご注文</a>
+            </div>
+            <div class="header_4_list_2">
+              <i class="fa fa-angle-right"></i>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <%= yield %>
+
+    <footer>
+      <div class="footer_1">
+        <ul class="footer1_list">
+          <li><%= link_to("管理者ログイン", "/login",) %></li>
+          <li><%= link_to("管理者ログアウト", "/logout", {method: "post"}) %></li>
+        </ul>
+      </div>
+      <div class="footer_2">
+        <ul class="footer_2_list">
+          <% if @current_user %>
+          <li><a href="/menus/new">メニュー登録</a></li>
+          <li><a href="/menus/index">メニュー一覧</a></li>
+          <li><a href="/menus/index">メニュー編集・削除</a></li>
+          <li><a href="/signup">管理者登録</a></li>
+          <li><a href="/users/index">管理者一覧</a></li>
+          <li><a href="/users/index">管理者編集・削除</a></li>
+          <% end %>
+        </ul>
+      </div>
+      <div class="footer_3">
+        <a class="copyright">Copyright ©2005 kitarou All Rights Reserved.</a>
+      </div>
+    </footer>
+
+  </body>
+</html>
